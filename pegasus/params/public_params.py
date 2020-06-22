@@ -295,3 +295,18 @@ def billsum_transformer(param_overrides):
           "learning_rate": 0.0001,
           "batch_size": 8,
       }, param_overrides)
+
+
+@registry.register("fine_tune_colab")
+def multi_news_transformer(param_overrides):
+  return transformer_params(
+      {
+          "train_pattern": "tfrecord:/content/train.tfrecord",
+          "dev_pattern": "tfrecord:/content/val.tfrecord",
+          "test_pattern": "tfrecord:/content/test.tfrecord",
+          "max_input_len": 512,
+          "max_output_len": 128,
+          "train_steps": 8000,
+          "learning_rate": 0.0001,
+          "batch_size": 1,
+      }, param_overrides)	
