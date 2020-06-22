@@ -306,7 +306,7 @@ def multi_news_transformer(param_overrides):
           "test_pattern": "tfrecord:/content/test.tfrecord",
           "max_input_len": 1024,
           "max_output_len": 256,
-          "train_steps": 300,
+          "train_steps": 40,
           "learning_rate": 0.0001,
-          "batch_size": 1,
+          "batch_size": 2,
       }, param_overrides)	
