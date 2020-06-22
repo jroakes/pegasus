@@ -304,9 +304,9 @@ def multi_news_transformer(param_overrides):
           "train_pattern": "tfrecord:/content/train.tfrecord",
           "dev_pattern": "tfrecord:/content/val.tfrecord",
           "test_pattern": "tfrecord:/content/test.tfrecord",
-          "max_input_len": 512,
-          "max_output_len": 128,
-          "train_steps": 8000,
+          "max_input_len": 1024,
+          "max_output_len": 256,
+          "train_steps": 300,
           "learning_rate": 0.0001,
           "batch_size": 1,
       }, param_overrides)	
